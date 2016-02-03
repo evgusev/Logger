@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Configuration;
 
-namespace LoggerHost.Helpers
+namespace Logger.Helpers
 {
 	public static class Config
 	{

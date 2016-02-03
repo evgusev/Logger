@@ -4,9 +4,9 @@ using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LoggerHost.Helpers;
+using Logger.Helpers;
 
-namespace LoggerHost
+namespace Logger
 {
 	/// <summary>
 	/// Contains initial methods of the application.

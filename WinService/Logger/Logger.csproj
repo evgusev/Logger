@@ -7,8 +7,8 @@
     <ProjectGuid>{9ADAD711-B253-4E96-AF83-5DC53F3C8653}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LoggerHost</RootNamespace>
-    <AssemblyName>LoggerHost</AssemblyName>
+    <RootNamespace>Logger</RootNamespace>
+    <AssemblyName>Logger</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
