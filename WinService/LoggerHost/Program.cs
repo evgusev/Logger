@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace LoggerHost
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-        }
-    }
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			var app = new Logger();
+			app.Run();
+		}
+	}
 }
