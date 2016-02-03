@@ -18,7 +18,6 @@ namespace Logger
 		/// </summary>
 		public void Run()
 		{
-			Config.Init();
 			bool isFirstRun = true;
 			while (true)
 			{
@@ -27,12 +26,16 @@ namespace Logger
 					isFirstRun = false;
 					PerformJob(false);
 				}
-				PerformJob(true);
+				else
+				{
+					PerformJob(true);
+				}
 			}
 		}
 
 		private void PerformJob(bool useDelay)
 		{
+			Config.Refresh();
 			if (useDelay)
 			{
 				System.Threading.Thread.Sleep(Config.ReadInterval);

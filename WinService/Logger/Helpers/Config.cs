@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Reflection;
 
 namespace Logger.Helpers
 {
@@ -28,9 +29,18 @@ namespace Logger.Helpers
 		public static int WriteInterval { get; private set; }
 
 		/// <summary>
+		/// Refresh and initialize config settings.
+		/// </summary>
+		public static void Refresh()
+		{
+			ConfigurationManager.RefreshSection("appSettings");
+			Init();
+		}
+
+		/// <summary>
 		/// Initialize config settings.
 		/// </summary>
-		public static void Init()
+		private static void Init()
 		{
 			DataSource = ReadConfigParam("DataSource", "File");
 			ReadInterval = ReadConfigParam("ReadInterval", 10000);
