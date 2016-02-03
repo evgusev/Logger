@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Logger.Domain;
 
 namespace Logger
 {
@@ -10,7 +11,7 @@ namespace Logger
 	{
 		static void Main(string[] args)
 		{
-			var app = new Logger();
+			var app = Domain.Logger.Instance;
 			app.Run();
 		}
 	}

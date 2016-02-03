@@ -42,8 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\IDataStorage.cs" />
     <Compile Include="Helpers\Config.cs" />
-    <Compile Include="Main\Logger.cs" />
+    <Compile Include="Domain\LogData.cs" />
+    <Compile Include="Helpers\LogManager.cs" />
+    <Compile Include="Domain\Logger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
