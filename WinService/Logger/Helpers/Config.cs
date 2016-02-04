@@ -17,6 +17,11 @@ namespace Logger.Helpers
 		public static string DataSource { get; private set; }
 
 		/// <summary>
+		/// Gets a data source dll prefix.
+		/// </summary>
+		public static string DataSourceDllPrefix { get; private set; }
+
+		/// <summary>
 		/// Gets a interval for checking data layer type from config.
 		/// In Milliseconds.
 		/// </summary>
@@ -45,6 +50,7 @@ namespace Logger.Helpers
 			DataSource = ReadConfigParam("DataSource", "File");
 			ReadInterval = ReadConfigParam("ReadInterval", 10000);
 			WriteInterval = ReadConfigParam("WriteInterval", 5000);
+			DataSourceDllPrefix = ReadConfigParam("DataSourceDllPrefix", "DataSource.");
 		}
 
 		private static T ReadConfigParam<T>(string name, T defaultValue)
