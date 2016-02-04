@@ -17,10 +17,9 @@ namespace Logger.Helpers
 		public void WriteData(LogData logData, string dataSourceType)
 		{
 			var dsl = new DataSourceLoader();
-			var ninjectKernel = new StandardKernel();
-			dsl.SetDataSource(dataSourceType, ninjectKernel);
+			dsl.SetDataSource(dataSourceType, LoggerApp.Instance.DIContiner);
 			
-			dataStorage = ninjectKernel.Get<IDataStorage>();
+			dataStorage = LoggerApp.Instance.DIContiner.Get<IDataStorage>();
 			dataStorage.WriteData(logData);
 		}
 	}

@@ -51,7 +51,7 @@
     <Compile Include="Domain\LogData.cs" />
     <Compile Include="Helpers\DataSourceLoader.cs" />
     <Compile Include="Helpers\LogManager.cs" />
-    <Compile Include="Domain\Logger.cs" />
+    <Compile Include="Domain\LoggerApp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

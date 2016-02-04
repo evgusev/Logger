@@ -24,11 +24,15 @@ namespace Logger.Helpers
 		{
 			var storageType = TryToLoadDll(sourceType);
 			var type = storageType;
-			ninjectKernel.Load(Assembly.GetExecutingAssembly());
-			ninjectKernel.Bind<IDataStorage>().To(type);
+
+			var currentObj = ninjectKernel.TryGet<IDataStorage>();
+			if (currentObj == null || currentObj.GetType() != type)
+			{
+				ninjectKernel.Bind<IDataStorage>().To(type);
+			}
 		}
 
-		private static dynamic TryToLoadDll(string sourceType)
+		private static Type TryToLoadDll(string sourceType)
 		{
 			dynamic result = null;
 			var appPath = Path.GetDirectoryName(Application.ExecutablePath);
