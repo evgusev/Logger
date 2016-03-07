@@ -9,12 +9,12 @@ namespace DataSource.File
 {
 	public class FileStorage : IDataStorage
 	{
-		public IEnumerable<LogData> ReadData()
+		public IEnumerable<LogDataEntry> ReadData()
 		{
-			return new List<LogData>();
+			return new List<LogDataEntry>();
 		}
 
-		public void WriteData(LogData logData)
+		public void WriteData(LogDataEntry logData)
 		{
 			Console.WriteLine("It works! Time: {0}", logData.CurrentTime.ToString("dd.MM.yy"));
 		}

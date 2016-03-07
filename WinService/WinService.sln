@@ -5,6 +5,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSource.File", "..\DataStorages\DataSource.File\DataSource.File.csproj", "{F0E4F742-E043-4CBB-A0AD-CED34FC634DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfLoggerService", "WcfLoggerService\WcfLoggerService.csproj", "{15B3E0D2-6217-493A-A690-158C497F5318}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerWeb", "..\Web\LoggerWeb\LoggerWeb.csproj", "{26272FC3-2BAF-4A57-9D13-F3CB14FE5F07}"
+	ProjectSection(ProjectDependencies) = postProject
+		{15B3E0D2-6217-493A-A690-158C497F5318} = {15B3E0D2-6217-493A-A690-158C497F5318}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +26,14 @@ Global
 		{F0E4F742-E043-4CBB-A0AD-CED34FC634DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0E4F742-E043-4CBB-A0AD-CED34FC634DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0E4F742-E043-4CBB-A0AD-CED34FC634DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26272FC3-2BAF-4A57-9D13-F3CB14FE5F07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26272FC3-2BAF-4A57-9D13-F3CB14FE5F07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26272FC3-2BAF-4A57-9D13-F3CB14FE5F07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26272FC3-2BAF-4A57-9D13-F3CB14FE5F07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -86,7 +86,7 @@ namespace Logger.Domain
 		private void Write()
 		{
 			Config.Refresh();
-			var logData = new LogData
+			var logData = new LogDataEntry
 			{
 				CurrentTime = DateTime.Now
 			};

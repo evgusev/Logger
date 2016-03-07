@@ -14,13 +14,23 @@ namespace Logger.Helpers
 		private IDataStorage dataStorage;
 		private Type storage;
 		
-		public void WriteData(LogData logData, string dataSourceType)
+		public void WriteData(LogDataEntry logData, string dataSourceType)
 		{
 			var dsl = new DataSourceLoader();
 			dsl.SetDataSource(dataSourceType, LoggerApp.Instance.DIContiner);
 			
 			dataStorage = LoggerApp.Instance.DIContiner.Get<IDataStorage>();
 			dataStorage.WriteData(logData);
+		}
+
+		public LogDataModel GetData()
+		{
+ 			return new LogDataModel{
+				DataSourceType = LoggerApp.Instance.DataSourceType,
+				Logs = new List<LogDataEntry>{
+					{ new LogDataEntry { CurrentTime = DateTime.Now }}
+				}
+			};
 		}
 	}
 }
